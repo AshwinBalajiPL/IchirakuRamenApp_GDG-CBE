@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Ichiraku Ramen</string>
+    <string name="ramen_image">Ramen Image</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
 </resources>
