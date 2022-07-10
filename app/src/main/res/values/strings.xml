@@ -3,4 +3,5 @@
     <string name="ramen_image">Ramen Image</string>
     <string name="name">Name</string>
     <string name="price">Price</string>
+    <string name="switch_layout">Switch Layout</string>
 </resources>

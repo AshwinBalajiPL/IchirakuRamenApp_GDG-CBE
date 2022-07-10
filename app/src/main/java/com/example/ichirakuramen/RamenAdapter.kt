@@ -3,10 +3,10 @@ package com.example.ichirakuramen
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ichirakuramen.databinding.RamenListBinding
+import com.example.ichirakuramen.databinding.RamenLinearBinding
 
 class RamenAdapter(private val ramenList:List<Ramen>):RecyclerView.Adapter<RamenAdapter.RamenViewHolder>() {
-    inner class RamenViewHolder(private val binding : RamenListBinding):RecyclerView.ViewHolder(binding.root){
+    inner class RamenViewHolder(private val binding : RamenLinearBinding):RecyclerView.ViewHolder(binding.root){
         fun bind(ramen: Ramen){
             binding.ramenImg.setImageResource(ramen.imageId)
             binding.name.text = ramen.name
@@ -15,7 +15,7 @@ class RamenAdapter(private val ramenList:List<Ramen>):RecyclerView.Adapter<Ramen
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RamenViewHolder {
-        return RamenViewHolder(RamenListBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return RamenViewHolder(RamenLinearBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun onBindViewHolder(holder: RamenViewHolder, position: Int) {
