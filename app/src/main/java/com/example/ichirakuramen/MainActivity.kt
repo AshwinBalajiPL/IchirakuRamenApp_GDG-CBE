@@ -2,6 +2,7 @@ package com.example.ichirakuramen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import androidx.core.content.ContextCompat
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
             view.layoutManager = LinearLayoutManager(this)
         else
             view.layoutManager = GridLayoutManager(this,2)
-        view.adapter = RamenAdapter(
+        view.adapter = RamenAdapter(isLinear,
             listOf(
                 Ramen(R.drawable.beef_miso,"Beef Miso","$ 85.00"),
                 Ramen(R.drawable.korean,"Korean","$ 64.25"),
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     private fun setIcon(menuItem: MenuItem?){
         if(menuItem==null)
             return
-        menuItem.icon = if(isLinear) ContextCompat.getDrawable(this,R.drawable.ic_linear_layout)
+        menuItem.icon = if(!isLinear) ContextCompat.getDrawable(this,R.drawable.ic_linear_layout)
             else ContextCompat.getDrawable(this,R.drawable.ic_grid_layout)
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

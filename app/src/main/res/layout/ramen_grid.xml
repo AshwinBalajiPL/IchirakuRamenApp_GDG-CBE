@@ -4,6 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
+    app:cardElevation="8dp"
     app:contentPadding="5dp">
 
     <LinearLayout
@@ -13,8 +14,8 @@
 
         <ImageView
             android:id="@+id/ramen_img"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="175dp"
             android:layout_gravity="center_vertical"
             android:contentDescription="@string/ramen_image"
             app:srcCompat="@drawable/beef_miso" />
@@ -22,17 +23,19 @@
         <TextView
             android:id="@+id/name"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:text="@string/name" />
+            android:text="@string/name"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/price"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="30dp"
             android:paddingLeft="5dp"
             android:paddingRight="5dp"
-            android:text="@string/price" />
+            android:text="@string/price"
+            android:textSize="16sp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>
